@@ -4,4 +4,4 @@ for i in range(ord('a'), ord('z') + 1):
 
     i = chr(i)
 
-    print(i, end='')
+    print("{}".format(i), end='')
