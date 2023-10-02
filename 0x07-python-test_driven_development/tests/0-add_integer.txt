@@ -1,0 +1,55 @@
+How to use add_integer function
+===============================
+This module defines an integer addition function ``add_integer(a, b=98)``
+
+Usage
+=====
+The ``add_integer(...)`` function returns the addition of two arguments. For numbers the function works the same as the ``+`` operator.
+:
+
+   >>> add_integer = __import__('0-add_integer').add_integer
+   >>> add_integer(5, 2)
+   7
+
+Handles Negative numbers
+:
+
+   >>> add_integer(5, -7)
+   -2
+
+The function also works for float digits
+:
+
+   >>> add_integer(3.0, 4.0)
+   7
+
+Float digits are casted to int before addition is performed
+:
+   >>> add_integer(3.7, 0.3)
+   3
+
+:
+   >>> add_integer(-3.7, -0.3)
+   -3
+
+Float digits and integer values can be combined in the function
+:
+
+   >>> add_integer(3.7, 2)
+   5
+
+Non-Numbers Handling
+====================
+
+The ``add_integer(...)`` function expects both of the given arguments to be of either  integer of float value, else a TypeError is raised:
+:
+
+    >>> add_integer("school", 5)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+:
+
+   >>> add_integer(2, "school")
+   Traceback (most recent call last):
+   TypeError: b must be an integer
