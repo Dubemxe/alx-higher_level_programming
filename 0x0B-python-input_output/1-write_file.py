@@ -12,5 +12,5 @@ def write_file(filename="", text=""):
         the number of characters written'''
     count = 0
     with open(filename, mode="w", encoding="utf-8") as my_file:
-            count = my_file.write(text)
+        count = my_file.write(text)
     return count
