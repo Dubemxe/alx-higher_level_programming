@@ -4,10 +4,10 @@
 
 class MyInt(int):
     '''invert int operators ``==`` and ``!=``'''
-    def __eql__(self, value):
+    def __eq__(self, value):
         '''Reinvert ``==``  to ``!=`` operator'''
         return self.real != value
 
-    def __neql__(self, value):
+    def __ne__(self, value):
         '''Reinvert ``!=``  to ``==`` operator'''
         return self.real == value
