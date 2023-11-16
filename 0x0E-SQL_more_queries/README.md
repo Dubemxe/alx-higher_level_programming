@@ -1,1 +1,1 @@
-More queries.. Privileges and grants
+More queries
