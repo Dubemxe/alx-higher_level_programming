@@ -1,6 +1,4 @@
 #!/usr/bin/node
-//This script prints outputs based on arguments passed.
-
 let args = process.argv.slice(2);
 
 if (args.length === 0) {
