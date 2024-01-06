@@ -1,13 +1,3 @@
 #!/bin/bash
-# Extract the URL from the command-line arguments
-url=$1
-
-# Use curl to send a request and get the size of the response body
-response_size=$(curl -sI "$url" | grep -i content-length | awk '{print $2}' | tr -d '\r\n')
-
-# Check if the Content-Length header is present in the response
-if [ -n "$response_size" ]; then
-    echo "Size of the response body: ${response_size} bytes"
-else
-    echo "Unable to determine the size of the response body."
-fi
+# Sends a request to that URL, and displays the size of the body of the response
+curl -s "${1}" | wc -c
