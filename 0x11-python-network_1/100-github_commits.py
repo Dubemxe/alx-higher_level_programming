@@ -2,7 +2,7 @@
 ''' This script  lists 10 commits (from the most recent to oldest) of the
 repository “rails” by the user “rails”.'''
 from requests import get
-    from sys import argv
+from sys import argv
 
 
 if __name__ == "__main__":
