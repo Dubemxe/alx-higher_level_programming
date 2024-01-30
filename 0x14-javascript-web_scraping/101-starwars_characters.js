@@ -5,7 +5,7 @@ const url = 'https://swapi-api.hbtn.io/api/films/' + process.argv[2];
 req(url, function (error, res, body) {
   if (!error) {
     const characters = JSON.parse(body).characters;
-    printCharacters(characters, 0);
+    printChars(characters, 0);
   }
 });
 
