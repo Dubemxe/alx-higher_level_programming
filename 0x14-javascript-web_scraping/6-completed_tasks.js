@@ -11,7 +11,7 @@ request(url, function (error, response, body) {
     const tasks = JSON.parse(body);
     for (const i in tasks) {
       const task = tasks[i];
-      if (task.completed_tasks === true) {
+      if (task.completed === true) {
         if (completed_tasks[task.userId] === undefined) {
           completed_tasks[task.userId] = 1;
         } else {
